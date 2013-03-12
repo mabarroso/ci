@@ -14,4 +14,11 @@ use Behat\MinkExtension\Context\MinkContext;
  */
 class FeatureContext extends MinkContext
 {
+    /**
+     * @When /^I go to an inexistent page$/
+     */
+    public function iGoToAnInexistentPage()
+    {
+        $this->getSession()->visit("404");
+    }
 }
